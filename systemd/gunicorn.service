@@ -6,7 +6,7 @@ After=network.target
 User=www
 Group=www-data
 WorkingDirectory=/home/www/code/project1/src
-ExecStart=/home/www/code/project1/env/bin/gunicorn --access-logfile - --workers 3 --bind unix:/home/www/code/project1/gunicorn/gunicorn.sock config.wsgi:application
+ExecStart=/home/www/code/project1/env/bin/gunicorn --workers 3 --bind unix:/home/www/code/project1/gunicorn/gunicorn.sock config.wsgi:application --access-logfile /home/www/code/project1/gunicorn/access.log --error-logfile /home/www/code/project1/gunicorn/error.log
 Restart=on-failure
 
 [Install]
