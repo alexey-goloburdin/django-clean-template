@@ -13,6 +13,7 @@ sed -i "s/templatedomain/yandex.ru/g" nginx/site.conf src/config/settings.py
 sudo ln -s /home/www/code/project1/nginx/site.conf /etc/nginx/sites-enabled/
 sudo ln -s /home/www/code/project1/systemd/gunicorn.service /etc/systemd/system/
 
+sudo systemctl daemon-reload
 sudo systemctl start gunicorn
 sudo systemctl enable gunicorn
 sudo service nginx restart
