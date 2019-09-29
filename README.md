@@ -15,7 +15,7 @@ sudo ln -s /home/www/code/project1/systemd/gunicorn.service /etc/systemd/system/
 
 sudo systemctl start gunicorn
 sudo systemctl enable gunicorn
-sudo nginx -s reload
+sudo service nginx restart
 ```
 
 В конфиге Django заполните настройки базы данных (`src/config/settings.py`).
