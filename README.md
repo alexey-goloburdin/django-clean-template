@@ -4,7 +4,7 @@
 
 ```bash
 sed -i "s/project1/myproject/" nginx/site.conf systemd/gunicorn.service
-sed -i "s/project1domain/yandex.ru/" nginx/site.conf src/config/settings.py
+sed -i "s/templatedomain/yandex.ru/" nginx/site.conf src/config/settings.py
 ```
 
 2. Создать симлинки на nginx и systemd конфиги, запустить сервис systemd, перезапустить nginx:
