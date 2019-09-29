@@ -3,8 +3,8 @@
 1. В конфигах замените `project1` на ваше название проекта (это название папки в `/home/www/code/`), а также замените название домена:
 
 ```bash
-sed -i "s/project1/myproject/" nginx/site.conf systemd/gunicorn.service
-sed -i "s/templatedomain/yandex.ru/" nginx/site.conf src/config/settings.py
+sed -i "s/project1/myproject/g" nginx/site.conf systemd/gunicorn.service
+sed -i "s/templatedomain/yandex.ru/g" nginx/site.conf src/config/settings.py
 ```
 
 2. Создать симлинки на nginx и systemd конфиги, запустить сервис systemd, перезапустить nginx:
