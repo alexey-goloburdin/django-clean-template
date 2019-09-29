@@ -1,7 +1,9 @@
-1. Заменить project1 на название проекта:
+Это чистый шаблон Django проекта, с которым можно быстро начать разработку. В шаблон входит конфиг Systemd, nginx, gunicorn.
+
+1. Заменить project1 на название проекта в конфигах — например, myproject:
 
 ```bash
-sed -i "s/project1/salesbeat/" nginx/site.conf systemd/gunicorn.service
+sed -i "s/project1/myproject/" nginx/site.conf systemd/gunicorn.service
 ```
 
 2. Создать симлинки на nginx и systemd конфиги, запустить сервис systemd, перезапустить nginx:
@@ -15,7 +17,10 @@ sudo systemctl enable gunicorn
 sudo nginx -s reload
 ```
 
-Статус gunicorn демона:
+В конфиге Django заполните ALLOWED_HOSTS и настройк базы данных (`src/config/settings.py`).
+
+
+Посмотреть статус gunicorn демона:
 
 ```bash
 sudo systemctl status gunicorn
@@ -33,4 +38,3 @@ sudo journalctl -fu gunicorn
 sudo systemctl daemon-reload
 sudo systemctl restart gunicorn
 ```
-
