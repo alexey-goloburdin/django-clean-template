@@ -10,7 +10,7 @@ source env/bin/activate
 pip install -U pip
 pip install -r requirements.txt
 
-sed -i "s~template_project_path~$project_path~g" nginx/site.conf systemd/gunicorn.service
+sed -i "s~template_path~$project_path~g" nginx/site.conf systemd/gunicorn.service
 sed -i "s~template_domain~$project_domain~g" nginx/site.conf src/config/settings.py
 
 sudo ln -s $project_path/nginx/site.conf /etc/nginx/sites-enabled/
