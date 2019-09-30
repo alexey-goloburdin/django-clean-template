@@ -5,8 +5,8 @@ After=network.target
 [Service]
 User=www
 Group=www-data
-WorkingDirectory=templatedir/src
-ExecStart=template_project_path/env/bin/gunicorn --workers 3 --bind unix:template_project_path/gunicorn/gunicorn.sock config.wsgi:application --access-logfile template_project_path/gunicorn/access.log --error-logfile template_project_path/gunicorn/error.log
+WorkingDirectory=template_path/src
+ExecStart=template_path/env/bin/gunicorn --workers 3 --bind unix:template_path/gunicorn/gunicorn.sock config.wsgi:application --access-logfile template_path/gunicorn/access.log --error-logfile template_path/gunicorn/error.log
 Restart=on-failure
 
 [Install]
