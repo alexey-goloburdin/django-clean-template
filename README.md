@@ -14,11 +14,7 @@
 sudo systemctl status gunicorn
 ```
 
-Лог gunicorn'а (`-f` как в `tail -f`):
-
-```bash
-sudo journalctl -fu gunicorn
-```
+Логи gunicorn'а лежат в `gunicorn/access.log` и `gunicorn/error.log`.
 
 После изменения systemd конфига надо перечитать его и затем перезапустить юнит:
 
