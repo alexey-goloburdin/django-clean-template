@@ -20,5 +20,5 @@ requests==2.22.0
 six==1.12.0
 sqlparse==0.3.0
 traitlets==4.3.2
-urllib3==1.25.6
+urllib3==1.25.8
 wcwidth==0.1.7
